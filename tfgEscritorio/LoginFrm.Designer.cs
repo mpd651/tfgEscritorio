@@ -65,6 +65,7 @@
             // 
             this.txtContrasena.Location = new System.Drawing.Point(87, 38);
             this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.PasswordChar = '*';
             this.txtContrasena.Size = new System.Drawing.Size(183, 20);
             this.txtContrasena.TabIndex = 3;
             // 
@@ -88,7 +89,7 @@
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // login
+            // LoginFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -99,7 +100,7 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lblContrasena);
             this.Controls.Add(this.lblUsuario);
-            this.Name = "login";
+            this.Name = "LoginFrm";
             this.Text = "Inicio sesión";
             this.ResumeLayout(false);
             this.PerformLayout();

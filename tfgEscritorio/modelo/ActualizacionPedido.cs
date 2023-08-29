@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace tfgEscritorio.modelo
 {
-    internal class ActualizacionPedido
+    public class ActualizacionPedido
     {
-        int id { get; set; }
+        public int id { get; set; }
 
-        Pedido pedido { get; set; }
+        public Pedido pedido { get; set; }
 
-        Usuario usuario { get; set; }
+        public Usuario usuario { get; set; }
 
-        System.DateTime fecha { get; set; }
+        public System.DateTime fecha { get; set; }
 
-        string motivo { get; set; }
+        public string motivo { get; set; }
 
     }
 }

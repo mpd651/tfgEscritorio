@@ -28,86 +28,150 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.menuPadre = new System.Windows.Forms.MenuStrip();
+            this.panelesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.camarerosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mesasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pedidosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administradoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ventanaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cascadaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.horizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verticalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuPadre.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // menuPadre
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(1, 25);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(799, 426);
-            this.tabControl1.TabIndex = 0;
+            this.menuPadre.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.panelesToolStripMenuItem,
+            this.ventanaToolStripMenuItem,
+            this.cerrarSesionToolStripMenuItem});
+            this.menuPadre.Location = new System.Drawing.Point(0, 0);
+            this.menuPadre.MdiWindowListItem = this.ventanaToolStripMenuItem;
+            this.menuPadre.Name = "menuPadre";
+            this.menuPadre.Size = new System.Drawing.Size(761, 24);
+            this.menuPadre.TabIndex = 2;
+            this.menuPadre.Text = "menuStrip1";
             // 
-            // tabPage1
+            // panelesToolStripMenuItem
             // 
-            this.tabPage1.Controls.Add(this.listView1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(791, 400);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.panelesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.productosToolStripMenuItem,
+            this.categoriasToolStripMenuItem,
+            this.camarerosToolStripMenuItem,
+            this.mesasToolStripMenuItem,
+            this.pedidosToolStripMenuItem1,
+            this.clientesToolStripMenuItem,
+            this.administradoresToolStripMenuItem});
+            this.panelesToolStripMenuItem.Name = "panelesToolStripMenuItem";
+            this.panelesToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.panelesToolStripMenuItem.Text = "Paneles";
             // 
-            // tabPage2
+            // productosToolStripMenuItem
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 74);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.productosToolStripMenuItem.Text = "Productos";
+            this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
             // 
-            // button1
+            // categoriasToolStripMenuItem
             // 
-            this.button1.Location = new System.Drawing.Point(725, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
+            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.categoriasToolStripMenuItem.Text = "Categorias";
+            this.categoriasToolStripMenuItem.Click += new System.EventHandler(this.categoriasToolStripMenuItem_Click);
             // 
-            // label1
+            // camarerosToolStripMenuItem
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(2, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.camarerosToolStripMenuItem.Name = "camarerosToolStripMenuItem";
+            this.camarerosToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.camarerosToolStripMenuItem.Text = "Camareros";
+            this.camarerosToolStripMenuItem.Click += new System.EventHandler(this.camarerosToolStripMenuItem_Click);
             // 
-            // listView1
+            // mesasToolStripMenuItem
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(-4, 0);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(799, 404);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.mesasToolStripMenuItem.Name = "mesasToolStripMenuItem";
+            this.mesasToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.mesasToolStripMenuItem.Text = "Mesas";
+            this.mesasToolStripMenuItem.Click += new System.EventHandler(this.mesasToolStripMenuItem_Click);
+            // 
+            // pedidosToolStripMenuItem1
+            // 
+            this.pedidosToolStripMenuItem1.Name = "pedidosToolStripMenuItem1";
+            this.pedidosToolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
+            this.pedidosToolStripMenuItem1.Text = "Pedidos";
+            this.pedidosToolStripMenuItem1.Click += new System.EventHandler(this.pedidosToolStripMenuItem1_Click);
+            // 
+            // clientesToolStripMenuItem
+            // 
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.clientesToolStripMenuItem.Text = "Clientes";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
+            // 
+            // administradoresToolStripMenuItem
+            // 
+            this.administradoresToolStripMenuItem.Name = "administradoresToolStripMenuItem";
+            this.administradoresToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.administradoresToolStripMenuItem.Text = "Administradores";
+            this.administradoresToolStripMenuItem.Click += new System.EventHandler(this.administradoresToolStripMenuItem_Click);
+            // 
+            // ventanaToolStripMenuItem
+            // 
+            this.ventanaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cascadaToolStripMenuItem,
+            this.horizontalToolStripMenuItem,
+            this.verticalToolStripMenuItem});
+            this.ventanaToolStripMenuItem.Name = "ventanaToolStripMenuItem";
+            this.ventanaToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.ventanaToolStripMenuItem.Text = "Ventana";
+            // 
+            // cascadaToolStripMenuItem
+            // 
+            this.cascadaToolStripMenuItem.Name = "cascadaToolStripMenuItem";
+            this.cascadaToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.cascadaToolStripMenuItem.Text = "Cascada";
+            this.cascadaToolStripMenuItem.Click += new System.EventHandler(this.cascadaToolStripMenuItem_Click);
+            // 
+            // horizontalToolStripMenuItem
+            // 
+            this.horizontalToolStripMenuItem.Name = "horizontalToolStripMenuItem";
+            this.horizontalToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.horizontalToolStripMenuItem.Text = "Horizontal";
+            this.horizontalToolStripMenuItem.Click += new System.EventHandler(this.horizontalToolStripMenuItem_Click);
+            // 
+            // verticalToolStripMenuItem
+            // 
+            this.verticalToolStripMenuItem.Name = "verticalToolStripMenuItem";
+            this.verticalToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.verticalToolStripMenuItem.Text = "Vertical";
+            this.verticalToolStripMenuItem.Click += new System.EventHandler(this.verticalToolStripMenuItem_Click);
+            // 
+            // cerrarSesionToolStripMenuItem
+            // 
+            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.cerrarSesionToolStripMenuItem.Text = "Cerrar sesión";
+            this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
             // VentanaPrincipalFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(761, 326);
+            this.Controls.Add(this.menuPadre);
+            this.IsMdiContainer = true;
+            this.MainMenuStrip = this.menuPadre;
             this.Name = "VentanaPrincipalFrm";
-            this.Text = "VentanaPrincipalFrm";
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.Text = "Ventana principal";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.VentanaPrincipalFrm_FormClosing);
+            this.menuPadre.ResumeLayout(false);
+            this.menuPadre.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,11 +179,19 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.MenuStrip menuPadre;
+        private System.Windows.Forms.ToolStripMenuItem panelesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem categoriasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem camarerosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mesasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pedidosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ventanaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cascadaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem horizontalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verticalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administradoresToolStripMenuItem;
     }
 }

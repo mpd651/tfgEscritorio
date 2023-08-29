@@ -14,6 +14,21 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -38,6 +53,7 @@
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -54,13 +70,64 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdministradoresFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministradoresFrm.Designer.cs">
+      <DependentUpon>AdministradoresFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="apiHelper\Consumer.cs" />
     <Compile Include="apiHelper\Reply.cs" />
+    <Compile Include="CamareroFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamareroFrm.Designer.cs">
+      <DependentUpon>CamareroFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CamarerosFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamarerosFrm.Designer.cs">
+      <DependentUpon>CamarerosFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoriaFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoriaFrm.Designer.cs">
+      <DependentUpon>CategoriaFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoriasFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoriasFrm.Designer.cs">
+      <DependentUpon>CategoriasFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientesFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientesFrm.Designer.cs">
+      <DependentUpon>ClientesFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dto\PedidoDto.cs" />
+    <Compile Include="dto\ProductoDto.cs" />
+    <Compile Include="dto\ProductoPedidoDto.cs" />
     <Compile Include="LoginFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginFrm.Designer.cs">
       <DependentUpon>LoginFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MesaFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MesaFrm.Designer.cs">
+      <DependentUpon>MesaFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MesasFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MesasFrm.Designer.cs">
+      <DependentUpon>MesasFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="modelo\ActualizacionPedido.cs" />
     <Compile Include="modelo\Categoria.cs" />
@@ -69,6 +136,30 @@
     <Compile Include="modelo\Producto.cs" />
     <Compile Include="modelo\ProductosPedido.cs" />
     <Compile Include="modelo\Usuario.cs" />
+    <Compile Include="PedidoFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PedidoFrm.Designer.cs">
+      <DependentUpon>PedidoFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PedidosFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PedidosFrm.Designer.cs">
+      <DependentUpon>PedidosFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductoFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductoFrm.Designer.cs">
+      <DependentUpon>ProductoFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductosFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductosFrm.Designer.cs">
+      <DependentUpon>ProductosFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrarFrm.cs">
@@ -84,8 +175,44 @@
     <Compile Include="VentanaPrincipalFrm.Designer.cs">
       <DependentUpon>VentanaPrincipalFrm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdministradoresFrm.resx">
+      <DependentUpon>AdministradoresFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CamareroFrm.resx">
+      <DependentUpon>CamareroFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CamarerosFrm.resx">
+      <DependentUpon>CamarerosFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoriaFrm.resx">
+      <DependentUpon>CategoriaFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoriasFrm.resx">
+      <DependentUpon>CategoriasFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientesFrm.resx">
+      <DependentUpon>ClientesFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginFrm.resx">
       <DependentUpon>LoginFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MesaFrm.resx">
+      <DependentUpon>MesaFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MesasFrm.resx">
+      <DependentUpon>MesasFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PedidoFrm.resx">
+      <DependentUpon>PedidoFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PedidosFrm.resx">
+      <DependentUpon>PedidosFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductoFrm.resx">
+      <DependentUpon>ProductoFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductosFrm.resx">
+      <DependentUpon>ProductosFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -95,6 +222,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RegistrarFrm.resx">
       <DependentUpon>RegistrarFrm.cs</DependentUpon>
@@ -115,6 +243,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\Undo_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\action_add_16xMD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\action_Cancel_16xMD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

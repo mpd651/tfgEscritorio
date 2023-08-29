@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
 
 namespace tfgEscritorio.apiHelper
 {
@@ -33,7 +34,7 @@ namespace tfgEscritorio.apiHelper
             }
         }
 
-        public static async Task<Reply> Execute<T>(string url, methodHttp method, T objectRequest)
+        public static async Task<Reply> Execute<T>(string url, methodHttp method, T objectRequest, bool plural)
         {
             Reply oReply = new Reply();
             try
@@ -44,21 +45,34 @@ namespace tfgEscritorio.apiHelper
                     var myContent = JsonConvert.SerializeObject(objectRequest);
                     var bytecontent = new ByteArrayContent(Encoding.UTF8.GetBytes(myContent));
                     bytecontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-                    //Si es get o delete no le mandamos content
                     var request = new HttpRequestMessage(CreateHttpMethod(method), url)
                     {
                         Content = (method != methodHttp.GET) ? method != methodHttp.DELETE ? bytecontent : null : null
                     };
 
-                    using (HttpResponseMessage res = await client.SendAsync(request))
+                    using (HttpResponseMessage res = await client.SendAsync(request).ConfigureAwait(false))
                     {
                         using (HttpContent content = res.Content)
                         {
                             string data = await content.ReadAsStringAsync();
-                            if (data != null)
-                                oReply.Data = JsonConvert.DeserializeObject<T>(data);
+                           
+                            if (plural)
+                            {
+                                Newtonsoft.Json.Linq.JArray jsonArray = JArray.Parse(data);
+                                //oReply.Message = (string)jsonObject.SelectToken("message");
+                                oReply.Data = jsonArray.ToObject<List<T>>();
+                                oReply.StatusCode = res.StatusCode.ToString();
 
-                            oReply.StatusCode = res.StatusCode.ToString();
+                            }
+                            else
+                            {
+                                Newtonsoft.Json.Linq.JObject jsonObject = JObject.Parse(data);
+                                oReply.Message = (string)jsonObject.SelectToken("message");
+                                oReply.Data = JsonConvert.DeserializeObject<T>(data);
+                                oReply.StatusCode = res.StatusCode.ToString();
+                            }
+
+                              
                         }
                     }
                 }

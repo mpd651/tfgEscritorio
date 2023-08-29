@@ -16,3 +16,15 @@ C:\Users\mpd65\source\repos\tfgEscritorio\tfgEscritorio\obj\Debug\tfgEscritorio.
 C:\Users\mpd65\source\repos\tfgEscritorio\tfgEscritorio\obj\Debug\tfgEscritorio.LoginFrm.resources
 C:\Users\mpd65\source\repos\tfgEscritorio\tfgEscritorio\obj\Debug\tfgEscritorio.RegistrarFrm.resources
 C:\Users\mpd65\source\repos\tfgEscritorio\tfgEscritorio\obj\Debug\tfgEscritorio.VentanaPrincipalFrm.resources
+C:\Users\mpd65\source\repos\tfgEscritorio\tfgEscritorio\obj\Debug\tfgEscritorio.ProductosFrm.resources
+C:\Users\mpd65\source\repos\tfgEscritorio\tfgEscritorio\obj\Debug\tfgEscritorio.ProductoFrm.resources
+C:\Users\mpd65\source\repos\tfgEscritorio\tfgEscritorio\obj\Debug\tfgEscritorio.CategoriasFrm.resources
+C:\Users\mpd65\source\repos\tfgEscritorio\tfgEscritorio\obj\Debug\tfgEscritorio.CategoriaFrm.resources
+C:\Users\mpd65\source\repos\tfgEscritorio\tfgEscritorio\obj\Debug\tfgEscritorio.CamareroFrm.resources
+C:\Users\mpd65\source\repos\tfgEscritorio\tfgEscritorio\obj\Debug\tfgEscritorio.CamarerosFrm.resources
+C:\Users\mpd65\source\repos\tfgEscritorio\tfgEscritorio\obj\Debug\tfgEscritorio.MesaFrm.resources
+C:\Users\mpd65\source\repos\tfgEscritorio\tfgEscritorio\obj\Debug\tfgEscritorio.MesasFrm.resources
+C:\Users\mpd65\source\repos\tfgEscritorio\tfgEscritorio\obj\Debug\tfgEscritorio.PedidosFrm.resources
+C:\Users\mpd65\source\repos\tfgEscritorio\tfgEscritorio\obj\Debug\tfgEscritorio.AdministradoresFrm.resources
+C:\Users\mpd65\source\repos\tfgEscritorio\tfgEscritorio\obj\Debug\tfgEscritorio.ClientesFrm.resources
+C:\Users\mpd65\source\repos\tfgEscritorio\tfgEscritorio\obj\Debug\tfgEscritorio.PedidoFrm.resources

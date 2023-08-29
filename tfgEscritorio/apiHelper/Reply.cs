@@ -10,6 +10,7 @@ namespace tfgEscritorio.apiHelper
     {
         public string StatusCode { get; set; }
         public object Data { get; set; }
+        public string Message { get; set; }
     }
 
     public enum methodHttp

@@ -6,18 +6,16 @@ using System.Threading.Tasks;
 
 namespace tfgEscritorio.modelo
 {
-    internal class ProductosPedido
+    public class ProductosPedido
     {
-        int id { get; set; }
+        public int productoPedidoid { get; set; }
 
-        Producto producto { get; set; }
+        public Producto producto { get; set; }
 
-        Pedido pedido { get; set; }
+        public Pedido pedido { get; set; }
 
-        bool servido { get; set; }
+        public int cantidad { get; set; }
 
-        int cantidad { get; set; }
-
-        System.DateTime hora { get; set; }
+        public System.DateTime hora { get; set; }
     }
 }

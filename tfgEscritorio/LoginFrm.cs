@@ -33,23 +33,26 @@ namespace tfgEscritorio
 
             Reply oReply = new Reply();
 
-            oReply = await Consumer.Execute<Usuario>(url, apiHelper.methodHttp.POST, usuarioObject);
+            oReply = await Consumer.Execute<Usuario>(url, apiHelper.methodHttp.POST, usuarioObject, false);
 
 
-            if (oReply != null && oReply.StatusCode == "created")
+            if (oReply != null && oReply.StatusCode == "Created")
             {
                 Consumer.username = txtUsuario.Text;
-                Consumer.username = txtContrasena.Text;
-                MessageBox.Show(oReply.StatusCode);
+                Consumer.password = txtContrasena.Text;
+                txtUsuario.Text = string.Empty;
+                txtContrasena.Text = string.Empty;
+                FormProvider.Login.Hide();
 
-
+                FormProvider.VentanaPrincipal.Location = this.Location;
+                FormProvider.VentanaPrincipal.StartPosition = FormStartPosition.Manual;
+                FormProvider.VentanaPrincipal.Show();
             }
             else
             {
                 txtUsuario.Text = string.Empty;
                 txtContrasena.Text = string.Empty;
-                MessageBox.Show(oReply.StatusCode);
-
+                MessageBox.Show(oReply.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
@@ -58,12 +61,13 @@ namespace tfgEscritorio
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            txtUsuario.Text = string.Empty;
+            txtContrasena.Text = string.Empty;
 
             FormProvider.Login.Hide();
-            RegistrarFrm registrar = new RegistrarFrm();
-            registrar.Location = this.Location;
-            registrar.StartPosition = FormStartPosition.Manual;
-            registrar.ShowDialog();
+            FormProvider.Registrar.Location=this.Location;
+            FormProvider.Registrar.StartPosition = FormStartPosition.Manual;
+            FormProvider.Registrar.Show();
             
         }
     }

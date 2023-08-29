@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace tfgEscritorio.modelo
 {
-    internal class Usuario
+    public class Usuario
     {
         public int id { get; set; }
 

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -32,16 +33,17 @@ namespace tfgEscritorio
 
             Reply oReply = new Reply();
 
-            oReply = await Consumer.Execute<Usuario>(url, apiHelper.methodHttp.POST, usuarioObject);
+            oReply = await Consumer.Execute<Usuario>(url, apiHelper.methodHttp.POST, usuarioObject, false);
 
 
-            if (oReply != null && oReply.StatusCode == "created")
+            if (oReply != null && oReply.StatusCode == "Created")
             {
                 Consumer.username = txtUsuario.Text;
-                Consumer.username = txtContrasena.Text;
-                MessageBox.Show(oReply.StatusCode);
-                
-                this.Close();
+                Consumer.password = txtContrasena.Text;
+
+                MessageBox.Show("Contraseña registrada", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                this.Hide();
                 FormProvider.Login.Show();
 
             }
@@ -49,7 +51,7 @@ namespace tfgEscritorio
             {
                 txtUsuario.Text = string.Empty;
                 txtContrasena.Text = string.Empty;
-                MessageBox.Show(oReply.StatusCode);
+                MessageBox.Show(oReply.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
@@ -57,8 +59,16 @@ namespace tfgEscritorio
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            this.Close();
+            txtUsuario.Text = string.Empty;
+            txtContrasena.Text = string.Empty;
+
+            this.Hide();
             FormProvider.Login.Show();
+        }
+
+        private void RegistrarFrm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

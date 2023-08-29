@@ -48,6 +48,7 @@
             // 
             // btnRegistrarContrasena
             // 
+            this.btnRegistrarContrasena.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnRegistrarContrasena.Location = new System.Drawing.Point(87, 89);
             this.btnRegistrarContrasena.Name = "btnRegistrarContrasena";
             this.btnRegistrarContrasena.Size = new System.Drawing.Size(75, 35);
@@ -58,14 +59,15 @@
             // 
             // txtContrasena
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(87, 45);
+            this.txtContrasena.Location = new System.Drawing.Point(113, 45);
             this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.PasswordChar = '*';
             this.txtContrasena.Size = new System.Drawing.Size(183, 20);
             this.txtContrasena.TabIndex = 9;
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(87, 19);
+            this.txtUsuario.Location = new System.Drawing.Point(113, 19);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(183, 20);
             this.txtUsuario.TabIndex = 8;
@@ -75,9 +77,9 @@
             this.lblContrasena.AutoSize = true;
             this.lblContrasena.Location = new System.Drawing.Point(14, 48);
             this.lblContrasena.Name = "lblContrasena";
-            this.lblContrasena.Size = new System.Drawing.Size(61, 13);
+            this.lblContrasena.Size = new System.Drawing.Size(95, 13);
             this.lblContrasena.TabIndex = 7;
-            this.lblContrasena.Text = "Contraseña";
+            this.lblContrasena.Text = "Nueva contraseña";
             // 
             // lblUsuario
             // 
@@ -101,6 +103,7 @@
             this.Controls.Add(this.lblUsuario);
             this.Name = "RegistrarFrm";
             this.Text = "Registrar contraseña";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RegistrarFrm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

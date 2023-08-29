@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace tfgEscritorio.modelo
 {
-    internal class Mesa
+    public class Mesa
     {
-        int id { get; set; }
+        public int id { get; set; }
 
-        int numeroMesa { get; set; }
+        public int numeroMesa { get; set; }
     }
 }

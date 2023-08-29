@@ -21,5 +21,37 @@ namespace tfgEscritorio.utils
         }
 
         private static LoginFrm _loginFrm;
+
+        public static RegistrarFrm Registrar
+        {
+            get
+            {
+                if (_registrarFrm == null)
+                {
+                    _registrarFrm = new RegistrarFrm();
+                }
+                return _registrarFrm;
+            }
+        }
+
+        private static RegistrarFrm _registrarFrm;
+
+
+        public static VentanaPrincipalFrm VentanaPrincipal
+        {
+            get
+            {
+                if (_ventanaFrm == null)
+                {
+                    _ventanaFrm = new VentanaPrincipalFrm();
+                }
+                return _ventanaFrm;
+            }
+        }
+
+        private static VentanaPrincipalFrm _ventanaFrm;
     }
+
+
+
 }

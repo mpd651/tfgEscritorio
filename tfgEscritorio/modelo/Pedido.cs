@@ -6,29 +6,27 @@ using System.Threading.Tasks;
 
 namespace tfgEscritorio.modelo
 {
-    internal class Pedido
+    public class Pedido
     {
-        int id { get; set; }
+        public int id { get; set; }
 
-        Mesa mesa { get; set; }
+        public Mesa mesa { get; set; }
 
-        List<ActualizacionPedido> actualizaciones { get; set; }
+        public List<ActualizacionPedido> actualizaciones { get; set; }
 
-        List<ProductosPedido> productosPedidos { get; set; }
+        public List<ProductosPedido> productosPedidos { get; set; }
 
-        float importe { get; set; }
+        public float importe { get; set; }
 
-        System.DateTime fechaApertura { get; set; }
+        public string fechaApertura { get; set; }
 
-        System.DateTime fechaCierre { get; set; }
+        public string fechaCierre { get; set; }
 
-        bool pagado { get; set; }
+        public bool pagado { get; set; }
 
-        bool anulado { get; set; }
+        public bool anulado { get; set; }
 
-        string formaPago { get; set; }
-
-        bool asignadoCamarero { get; set; }
+        public bool asignadoCamarero { get; set; }
 
     }
 }
